@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Download Button with</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #cfd9df;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .header {
+            width: 100%;
+            background-color: #3aa5e7;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+        .download-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            width: 100%;
+        }
+        .download-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #e2ebf0;
+            background-color: #065485;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s, cursor 0.3s;
+        }
+        .download-button.disabled {
+            background-color: #065485;
+            cursor: not-allowed;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="title">A K R M O D S</div>
+    </div>
+    <div class="download-container">
+        <button id="downloadBtn" class="download-button">Download</button>
+    </div>
+    <div class="footer">
+        &copy; 2024-2025 AKR MODS KARTHIK T 
+    </div>
+
+    <script>
+        const downloadButton = document.getElementById('downloadBtn');
+        const downloadLink = 'https://www.akrmodex.tech/2023/09/akr-whatsapp-v1058.html'; // Replace with your download link
+
+        downloadButton.addEventListener('click', function() {
+            if (downloadButton.disabled) return; // Prevent multiple clicks
+
+            downloadButton.disabled = true;
+            downloadButton.classList.add('disabled');
+            let countdown = 5;
+            downloadButton.textContent = `Wait ${countdown} seconds`;
+
+            const interval = setInterval(() => {
+                countdown--;
+                if (countdown > 0) {
+                    downloadButton.textContent = `Wait ${countdown} seconds`;
+                } else {
+                    clearInterval(interval);
+                    downloadButton.textContent = 'Download';
+                    downloadButton.disabled = false;
+                    downloadButton.classList.remove('disabled');
+                    window.location.href = downloadLink;
+                }
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
