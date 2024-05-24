@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centered Download Button with Countdown</title>
+    <title>DOWNLOAD SERVER</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
@@ -67,18 +67,18 @@
         <div class="title">A K R M O D S</div>
     </div>
     <div class="download-container">
-        <button id="downloadBtn" class="download-button">Download</button>
+        <button id="downloadBtn" class="download-button">GENERATE DOWNLOAD LINK</button>
     </div>
     <script type="text/javascript">
 	atOptions = {
-		'key' : '51a60d1ee62c4c553740cf34c911e702',
+		'key' : '4d3e7f815080c21f2fd109d673918229',
 		'format' : 'iframe',
-		'height' : 60,
-		'width' : 468,
+		'height' : 250,
+		'width' : 300,
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.topcreativeformat.com/51a60d1ee62c4c553740cf34c911e702/invoke.js"></script>
+<script type="text/javascript" src="//www.topcreativeformat.com/4d3e7f815080c21f2fd109d673918229/invoke.js"></script>
     <div class="footer">
         &copy; 2024-2025 AKR MODS KARTHIK T 
     </div>
@@ -93,15 +93,15 @@
             downloadButton.disabled = true;
             downloadButton.classList.add('disabled');
             let countdown = 5;
-            downloadButton.textContent = `Wait ${countdown} seconds`;
+            downloadButton.textContent = `GENERATING LINK WAIT ${countdown} SECONDS`;
 
             const interval = setInterval(() => {
                 countdown--;
                 if (countdown > 0) {
-                    downloadButton.textContent = `Wait ${countdown} seconds`;
+                    downloadButton.textContent = `GENERATING LINK WAIT ${countdown} SECONDS`;
                 } else {
                     clearInterval(interval);
-                    downloadButton.textContent = 'Download';
+                    downloadButton.textContent = 'REDIRECTING...';
                     downloadButton.disabled = false;
                     downloadButton.classList.remove('disabled');
                     window.location.href = downloadLink;
