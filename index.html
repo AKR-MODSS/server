@@ -101,7 +101,7 @@
                     downloadButton.textContent = `GENERATING LINK WAIT ${countdown} SECONDS`;
                 } else {
                     clearInterval(interval);
-                    downloadButton.textContent = 'REDIRECTING...';
+                    downloadButton.textContent = 'REDIRECTING . . .';
                     downloadButton.disabled = false;
                     downloadButton.classList.remove('disabled');
                     window.location.href = downloadLink;
